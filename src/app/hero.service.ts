@@ -4,13 +4,13 @@ import { HEROES } from './mock-heroes';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroService {
-  getHeroes(): Observable<Hero[]{
+  getHeroes(): Observable<Hero[]> {
     const heroes = of(HEROES);
     return heroes;
   }
 
-  constructor() { }
+  constructor() {}
 }
