@@ -1,0 +1,10 @@
+<div class="container">
+  <a
+    mat-raised-button
+    color="primary"
+    routerLink="/detail/{{ hero.id }}"
+    *ngFor="let hero of heroes"
+  >
+    {{ hero.name }}
+  </a>
+</div>

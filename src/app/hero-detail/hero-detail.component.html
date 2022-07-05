@@ -1,10 +1,14 @@
 <div *ngIf="hero">
+  <mat-card>
+    <mat-card-title> {{ hero.name | uppercase }} Details </mat-card-title>
 
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label for="hero-name">Hero-name: </label>
-    <input id="hero-name" [(ngmodel)]="hero.name" placeholder="name">
-  </div>
+    <mat-card-subtitle>id: {{ hero.id }}</mat-card-subtitle>
+    <mat-card-content>
+      <label for="name">Hero name: </label>
+      <input id="name" [(ngmodel)]="hero.name" placeholder="name" />
+    </mat-card-content>
+  </mat-card>
+  <br />
+
+  <button mat-flat-button color="accent" (click)="goBack()">Go Back</button>
 </div>
-
