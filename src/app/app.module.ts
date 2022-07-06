@@ -7,6 +7,11 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//Firebase
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 //Angular Material
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -36,6 +41,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatFormFieldModule,
     AppRoutingModule,
     MatListModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

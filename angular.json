@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "tour:build:production",
+            "firebaseProject": "tour-of-heroes-456b5",
+            "firebaseHostingSite": "tour-of-heroes-456b5"
+          }
         }
       }
     }
