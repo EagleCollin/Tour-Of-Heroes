@@ -7,6 +7,11 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//HTTP
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 //Firebase
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -43,6 +48,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

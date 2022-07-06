@@ -111,5 +111,8 @@
       }
     }
   },
-  "defaultProject": "tour"
+  "defaultProject": "tour",
+  "cli": {
+    "analytics": false
+  }
 }
